@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+      <add
+            id="Zargam_ChangeOrderStatusColor::manage_order_status_background_color"
+            title="Manage Employees"
+            translate="title"
+            module="Zargam_ChangeOrderStatusColor"
+            resource="Zargam_ChangeOrderStatusColor::manage_order_status_background_color"
+            parent="Magento_Customer::customer"
+            sortOrder="900"
+        />
+        <add
+            id="Zargam_ChangeOrderStatusColor::order_status_background_color"
+            title="Change Order Status BG Color"
+            translate="Change Order Status BG Color"
+            module="Zargam_ChangeOrderStatusColor"
+            resource="Zargam_ChangeOrderStatusColor::order_status_background_color"
+            parent="Zargam_ChangeOrderStatusColor::manage_order_status_background_color"
+            action="change_order_status_color/orderbgcolor"
+        />
+    </menu>
+</config>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="order_bg_color_change" engine="innodb" comment="Order Background Color Change">
+        <column name="id" xsi:type="int" padding="10" unsigned="true" nullable="false" identity="true" comment="Id"/>
+        <column xsi:type="varchar" name="status" nullable="false" length="255"/>
+        <column xsi:type="varchar" name="color" nullable="false" length="255"/>
+        <column name="created_at" xsi:type="datetime" nullable="false" default="CURRENT_TIMESTAMP" on_update="false" comment="Created at"/>
+        <column name="updated_at" xsi:type="datetime" nullable="false" default="CURRENT_TIMESTAMP" on_update="true" comment="Updated at"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+         <index referenceId="ZARGAM_CHANGEORDERSTATUSCOLOR_STATUS_ORDERBGCOLOR" indexType="fulltext">
+            <column name="status"/>
+        </index>
+    </table>
+</schema>
