@@ -7,7 +7,7 @@
             translate="title"
             module="Zargam_ChangeOrderStatusColor"
             resource="Zargam_ChangeOrderStatusColor::manage_order_status_background_color"
-            parent="Magento_Customer::customer"
+            parent="Magento_Sales::sales"
             sortOrder="900"
         />
         <add
